@@ -23,7 +23,6 @@ public class Main {
 		System.out.println("The elapsed Seconds is " + (tEnd - tStart) / 1000.0 + " s");
 	}
 
-	// read and write the I/O
 	public static void solve() {
 
 		try (BufferedReader in = new BufferedReader(new FileReader(INPUT_FILE_NAME));
@@ -47,7 +46,7 @@ public class Main {
 					testCases = Integer.parseInt(line);
 
 					lights = new HashSet<>();
-				} else {  // read the coordinates of mosquitos
+				} else {  // read the coordinates of mosquitos, do the statics
 					String[] values = line.split(" ");
 					int x = Integer.parseInt(values[0]);
 					int y = Integer.parseInt(values[1]);
@@ -70,7 +69,7 @@ public class Main {
 		}
 	}
 
-	// theory: in the 30,60,90 degrees triangle, the ratio of the sides length is 1:2:√3
+	// theory: in the 30,60,90 degrees triangle, the ratio of the sides length is 1:√3:2
 	// input: the coordinate of mosquitos
 	// output: the x coordinate of the light hit on the material, ignore the y coordinates since they're identical
 	public static double calculateLightCoordFromMosquito(int x, int y) {
