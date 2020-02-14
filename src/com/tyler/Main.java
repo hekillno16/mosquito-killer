@@ -12,8 +12,8 @@ import java.util.Set;
 
 public class Main {
 
-	private static final String INPUT_FILE_NAME = "src/com/tyler/input.txt";
-	private static final String OUTPUT_FILE_NAME = "src/com/tyler/output.txt";
+	private static final String INPUT_FILE_PATH = "src/com/tyler/input.txt";
+	private static final String OUTPUT_FILE_PATH = "src/com/tyler/output.txt";
 	private static final double LONG_SHORT_SIDE_RATIO = 2;
 
 	public static void main(String[] args) {
@@ -25,8 +25,8 @@ public class Main {
 
 	public static void solve() {
 
-		try (BufferedReader in = new BufferedReader(new FileReader(INPUT_FILE_NAME));
-		     BufferedWriter out = new BufferedWriter(new FileWriter(OUTPUT_FILE_NAME))) {
+		try (BufferedReader in = new BufferedReader(new FileReader(INPUT_FILE_PATH));
+		     BufferedWriter out = new BufferedWriter(new FileWriter(OUTPUT_FILE_PATH))) {
 
 			String line;
 			int count = 0;
